@@ -445,7 +445,7 @@
     } elseif (!has_length($user['email'], array('min' => 1, 'max' => 255))) {
       $errors[] = "Email must be less than 255 characters.";
     } elseif (!passes_email_whitelist($user['email'])) {
-      $errors[] = "Email must contain only the whitelisted characters A-Z, a-z, 0-9, and @ . _ -"
+      $errors[] = "Email must contain only the whitelisted characters A-Z, a-z, 0-9, and @ . _ -";
     }elseif (!is_valid_email($user['email'])) {
       $errors[] = "Email must be a valid format (e.g. test@email.com)";
     }
